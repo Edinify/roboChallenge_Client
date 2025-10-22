@@ -1,0 +1,94 @@
+/* Konteyner (narıncı qradient + böyük radius) */
+.user-header {
+  background: linear-gradient(135deg, #e6762a, #d06023 40%, #c04f1b);
+  padding: 14px 18px;
+  border-radius: 22px;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.15);
+}
+
+.user-header .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Soldakı istifadəçi məlumatı – şəffaf “pill” */
+.user-header .user-context p {
+  margin: 0;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .3px;
+
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.28);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 10px 16px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Sağdakı düymələr qrupu */
+.user-header .header-btns {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* “Glass” pill düymə stili */
+.user-header .header-btns button {
+  appearance: none;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.22);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .4px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  transition: transform .15s ease, background .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+
+.user-header .header-btns button:hover {
+  background: rgba(255,255,255,0.3);
+  border-color: rgba(255,255,255,0.6);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+  transform: translateY(-1px);
+}
+
+.user-header .header-btns button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18) inset;
+}
+
+/* İkonlar varsa (react-icons) düymədə avtomatik rənglənəcək */
+.user-header .header-btns button svg {
+  width: 18px;
+  height: 18px;
+  color: #fff;
+}
+
+/* Dar ekranlar üçün */
+@media (max-width: 680px) {
+  .user-header .header-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .user-header .header-btns {
+    justify-content: space-between;
+  }
+  .user-header .user-context p {
+    justify-content: center;
+  }
+}

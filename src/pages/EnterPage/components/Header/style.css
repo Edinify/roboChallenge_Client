@@ -1,0 +1,40 @@
+.enterpage-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.enterpage-header .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.enterpage-header .header-container .header-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.enterpage-header .header-container .header-logo-container .header-logo{
+    margin-right: 10px;
+}
+
+.enterpage-header .header-container .header-navbar {
+  display: flex;
+  align-items: center;
+}
+
+.enterpage-header .header-container .header-navbar li {
+  margin-right: 5px;
+  list-style: none;
+  font-size: 16px;
+  color: black;
+  cursor: pointer;
+}
+
+.enterpage-header .header-container .header-navbar li a {
+  text-decoration: none;
+  color: black;
+}

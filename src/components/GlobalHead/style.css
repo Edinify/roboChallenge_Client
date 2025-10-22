@@ -1,0 +1,50 @@
+.details-header {
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 6px;
+  background-color: white;
+}
+
+.details-header .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.details-header .logout-btn button{
+    appearance: none;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: red;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .4px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+
+
+}
+
+
+.add-detail{
+    background-color: #462aff;
+  border-radius: 8px;
+  padding: 10px 24px;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+}

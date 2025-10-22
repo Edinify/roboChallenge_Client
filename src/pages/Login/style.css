@@ -1,0 +1,141 @@
+.login-page {
+  background-color: gray;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-page .login-container {
+  background-color: white;
+  width: 60%;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+/* .login-page .login-container .login-header {
+} */
+
+.login-page .login-container .login-header .switch-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-page
+  .login-container
+  .login-header
+  .switch-container
+  .login-switch-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  padding: 6px;
+  border-radius: 4px;
+  background-color: #f3f4f6;
+  color: #6b7181;
+}
+
+.login-page
+  .login-container
+  .login-header
+  .switch-container
+  .login-switch-container
+  button {
+  background-color: transparent;
+  margin: 0 5px;
+  font-size: 16px;
+}
+
+.login-page
+  .login-container
+  .login-header
+  .switch-container
+  .login-switch-container.active {
+  color: white;
+
+  background-color: #8a493f;
+}
+
+/*  login form */
+
+.login-form-page {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form-page .login-form-container {
+  width: 100%;
+}
+
+.login-form-page .form-header {
+  text-align: center;
+}
+
+.login-form-page .login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form-page .login-form .input-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.login-form-page .login-form input {
+  border: 1px solid #d1d5dc;
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.login-form .password-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.login-form .password-input input {
+  width: 100%;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+}
+
+.login-form-page .login-form .login-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.login-form-page .login-form .login-btn-container .login-btn {
+  /* width: 120px; */
+  background-color: #8a493f;
+  border-radius: 4px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-form-page .login-form .login-btn-container button {
+  color: white;
+  background-color: transparent;
+  text-align: center;
+  font-size: 16px;
+  margin-right: 5px;
+  cursor: pointer;
+}

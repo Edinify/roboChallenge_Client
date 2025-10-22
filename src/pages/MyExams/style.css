@@ -1,0 +1,304 @@
+.exam-cards {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.exam-card {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 20px;
+
+  /* margin: 16px auto; */
+}
+
+.exam-card__container {
+  background: radial-gradient(
+    120% 120% at 0% 0%,
+    #3a2a4f 0%,
+    #281e38 40%,
+    #1f1630 100%
+  );
+  border-radius: 22px;
+  padding: 18px;
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  position: relative;
+}
+
+/* üst “toolbar” nöqtələri */
+.exam-card__toolbar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.exam-card__toolbar .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.28);
+}
+
+/* Başlıq pill */
+.exam-card__title-pill {
+  display: inline-block;
+  background: linear-gradient(135deg, #c4773b, #b3622e);
+  padding: 10px 14px;
+  border-radius: 14px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 6px 18px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  margin-bottom: 14px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Info “glass” qutu */
+.exam-card__info {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 14px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+.exam-card__info .row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+}
+.exam-card__info .row:last-child {
+  border-bottom: none;
+}
+.exam-card__info .label {
+  color: rgba(255, 255, 255, 0.8);
+}
+.exam-card__info .value {
+  color: #fff;
+  font-weight: 600;
+}
+.exam-card__info .value.strong {
+  font-weight: 800;
+}
+
+/* Note kartı */
+.exam-card__note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 182, 117, 0.18),
+    rgba(255, 182, 117, 0.08)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 12px 14px;
+  border-radius: 14px;
+  margin: 14px 0 10px;
+  color: #ffe8d2;
+}
+
+/* Düymələr */
+.btn {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease, box-shadow 0.15s ease;
+  margin-top: 10px;
+}
+.btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+
+.btn-paid.ok {
+  background: linear-gradient(180deg, #18c964, #13a851);
+  border-color: #1ed975;
+  box-shadow: 0 8px 20px rgba(24, 201, 100, 0.35);
+}
+.btn-paid.pending {
+  background: linear-gradient(180deg, #f59e0b, #e07b05);
+  border-color: #f8b65b;
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);
+}
+
+.btn-training {
+  background: linear-gradient(180deg, #0f9d58, #0c874c);
+  border-color: #12b769;
+  box-shadow: 0 8px 20px rgba(15, 157, 88, 0.3);
+}
+
+.btn-start {
+  background: linear-gradient(180deg, #7c3aed, #6d28d9);
+  border-color: #a78bfa;
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.35);
+}
+
+/* Countdown */
+.exam-card__countdown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+.exam-card__countdown .cc {
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.exam-card__countdown .chip {
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #e5e7eb;
+  font-weight: 700;
+}
+
+/* COUNTDOWN WRAPPER */
+.exam-card__countdown {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Saat ikon kapsulu */
+.exam-card__countdown .cc {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #fff;
+}
+
+/* Hər vahid üçün blok (days/hours/minutes/seconds) */
+.exam-card__countdown .countdown-block {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Etiketlər – yalnız CSS ilə əlavə olunur */
+.exam-card__countdown .countdown-block .countdown-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  margin-right: 2px;
+}
+
+/* Nizam: cc-dən sonra gələn birinci blok = days, ikinci = hours, ... */
+.exam-card__countdown .countdown-block:nth-of-type(1) .countdown-label::after {
+  content: "Days";
+}
+.exam-card__countdown .countdown-block:nth-of-type(2) .countdown-label::after {
+  content: "Hours";
+}
+.exam-card__countdown .countdown-block:nth-of-type(3) .countdown-label::after {
+  content: "Minutes";
+}
+.exam-card__countdown .countdown-block:nth-of-type(4) .countdown-label::after {
+  content: "Seconds";
+}
+
+/* Rəqəm kapsulu */
+.exam-card__countdown .countdown-value {
+  min-width: 52px;
+  padding: 10px 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  color: #ffffff;
+  border-radius: 12px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.16),
+    rgba(255, 255, 255, 0.08)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Flip-vari kiçik animasiya (rəqəm dəyişəndə “parıltı” effekt) */
+@keyframes tickFlash {
+  0% {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    transform: translateY(0);
+  }
+  35% {
+    box-shadow: 0 0 18px rgba(167, 139, 250, 0.45);
+    transform: translateY(-1px);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    transform: translateY(0);
+  }
+}
+.exam-card__countdown .countdown-value {
+  animation: tickFlash 0.9s ease;
+}
+
+/* Aradakı “:” nöqtəciyi */
+.exam-card__countdown .dot {
+  margin: 0 2px;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 800;
+  font-size: 18px;
+  align-self: center;
+}
+
+/* Kiçik ekranlar */
+@media (max-width: 440px) {
+  .exam-card__countdown {
+    gap: 10px;
+    padding: 8px 10px;
+  }
+  .exam-card__countdown .countdown-value {
+    min-width: 46px;
+    font-size: 18px;
+    padding: 8px 8px;
+  }
+  .exam-card__countdown .countdown-label {
+    display: none;
+  } /* mobilde yalnız rəqəmlər qalsın */
+}
+
+/* Kiçik ekranlar üçün */
+@media (max-width: 420px) {
+  .exam-card__info .row {
+    font-size: 14px;
+  }
+  .exam-card__title-pill {
+    font-size: 14px;
+  }
+}

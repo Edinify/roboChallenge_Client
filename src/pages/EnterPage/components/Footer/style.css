@@ -1,0 +1,122 @@
+.footer-container{
+    margin: 20px 0;
+}
+
+.footer-container .logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container .logo-container img{
+    padding: 20px;
+    width: 120px;
+    height: 120px;
+}
+
+
+.footer {
+  background-color: #1c1c1c;
+  color: white;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #444;
+  padding-bottom: 30px;
+}
+
+.footer-address {
+  max-width: 250px;
+  color: cyan;
+}
+
+.footer-address h3 {
+  color: cyan;
+  margin-bottom: 10px;
+}
+
+.footer-partner {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.partner-icon {
+  font-size: 40px;
+  color: yellow;
+}
+
+.partner-text {
+  color: yellow;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.partner-title {
+  color: lime;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+}
+
+.fb { background-color: #3b5998; }
+.ig { background-color: #e4405f; }
+.tw { background-color: #55acee; }
+.yt { background-color: #cd201f; }
+
+.social-icon:hover {
+  opacity: 0.8;
+}
+
+/* ALT HİSSƏ */
+.footer-bottom {
+  margin-top: 40px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  text-align: left;
+}
+
+.footer-links h4 {
+  color: white;
+  margin-bottom: 8px;
+}
+
+.footer-links p {
+  color: #bbb;
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.footer-policy {
+  text-align: center;
+  color: #777;
+  margin-top: 25px;
+  font-size: 13px;
+}

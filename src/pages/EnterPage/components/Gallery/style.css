@@ -1,0 +1,21 @@
+.gallery {
+  margin: 20px 0;
+  padding: 20px;
+}
+
+.gallery .gallery-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.gallery .gallery-container .gallery-img-card{
+  height: 200px;
+}
+
+.gallery .gallery-container .gallery-img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}

@@ -1,0 +1,29 @@
+.enterpage-register {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+
+.enterpage-register .enterpage-register-container {
+  display: flex;
+  align-items: center;
+}
+
+.enterpage-register .enterpage-register-container .register-context {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.enterpage-register .enterpage-register-container .register-context h5 {
+  font-size: 16px;
+}
+
+.register-container button {
+  background-color: black;
+  color: orange;
+  font-size: 14px;
+  cursor: pointer;
+}
