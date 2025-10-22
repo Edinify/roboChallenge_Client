@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import "./style.css";
-import { logoutUser } from "../../services/auth/LoginSlice";
+import { logoutUser } from "../../services/auth/loginSlice";
 import { FiLogOut } from "react-icons/fi";
 const GlobalHead = ({ openModal }) => {
   const dispatch = useDispatch();

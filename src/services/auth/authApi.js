@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { apiRoot } from "../../apiRoot/apiRoot";
-import { logoutUser, setUserToken } from "./LoginSlice";
+import { logoutUser, setUserToken } from "./loginSlice";
 
 const getToken = () => localStorage.getItem("auth");
 
