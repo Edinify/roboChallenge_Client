@@ -1,5 +1,5 @@
 import "./style.css";
-import { logoutUser } from "../../services/auth/LoginSlice";
+import { logoutUser } from "../../services/auth/loginSlice";
 import { useDispatch } from "react-redux";
 import { useGetUserQuery } from "../../services/auth/authApi";
 import { useNavigate } from "react-router-dom";

@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
-import loginSlice from "../services/auth/LoginSlice";
+import loginSlice from "../services/auth/loginSlice";
 import loginModalSlice from "../services/auth/loginModal";
 import { authApi } from "../services/auth/authApi";
 import { examApi } from "../services/exams/examsApi";
