@@ -3,7 +3,9 @@ import { IoEyeOffSharp } from "react-icons/io5";
 import { IoEyeOutline } from "react-icons/io5";
 import { useState } from "react";
 import { useRegisterUserMutation } from "../../services/auth/authApi";
+import { useNavigate } from "react-router-dom";
 const Register = () => {
+  const navigate = useNavigate();
   const [viewPassword, setViewPassword] = useState(false);
   const [registerUser, { isLoading }] = useRegisterUserMutation();
   const [loginData, setLoginData] = useState({
@@ -13,6 +15,7 @@ const Register = () => {
     password: "",
     birthday: "",
     phone: "",
+    grade: "",
   });
 
   const handleSubmit = async (e) => {
@@ -20,6 +23,8 @@ const Register = () => {
     try {
       const data = await registerUser(loginData).unwrap();
       console.log(data, "data");
+      navigate("/login");
+      setLoginData({})
     } catch (error) {
       console.log(error);
     }
@@ -55,6 +60,18 @@ const Register = () => {
               required
               value={loginData.lastName}
               name="lastName"
+              onChange={handleChange}
+            />
+          </div>
+          <div className="input-container">
+            <label htmlFor="lastName">Grade</label>
+            <input
+              type="number"
+              placeholder="Enter your grade"
+              id="grade"
+              required
+              value={loginData.grage}
+              name="grade"
               onChange={handleChange}
             />
           </div>
