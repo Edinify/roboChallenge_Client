@@ -70,8 +70,6 @@ const RulesPage = () => {
         ))}
       </div>
 
-      {/* Qısa məsləhət: public/qovluq strukturu */}
-      {/* Public qovluğunda /public/rules/general-az.pdf saxla → url: /rules/general-az.pdf */}
     </div>
   );
 };

@@ -7,8 +7,6 @@ import { useGetUserQuery } from "../services/auth/authApi";
 import { UserRoute } from "./UserRoute";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Header from "../components/Header/Header";
-import AdminHeader from "../components/Header/AdminHeader";
-import { useSelector } from "react-redux";
 import { AdminRoute } from "./AdminRoute";
 import AdminSidebar from "../components/Sidebar/AdminSidebar";
 
@@ -16,27 +14,13 @@ const Routing = () => {
   const location = useLocation();
   const token = localStorage.getItem("auth");
 
-  const { loginData } = useSelector((state) => state.login);
-
-  console.log(loginData, "login data");
   const { data: user, isFetching } = useGetUserQuery(undefined, {
     skip: !token,
   });
 
-  console.log(user, "data");
   const isStudent = user?.role === "student";
 
   const isAdmin = user?.role === "super-admin";
-
-  const hideSidebarPaths = [
-    "/login",
-    "/register",
-    "/forgot",
-    "/send",
-    "/change-password",
-  ];
-  const shouldShowSidebar =
-    !isAdmin && !hideSidebarPaths.includes(location.pathname);
 
   if (token && isFetching && !user) {
     return (
@@ -47,7 +31,11 @@ const Routing = () => {
   }
 
   return (
-    <div className={`main-container ${!token || location.pathname==="/" ? "user-panel-container" : ""}  `}>
+    <div
+      className={`main-container ${
+        !token || location.pathname === "/" ? "user-panel-container" : ""
+      }  `}
+    >
       {isStudent && location.pathname !== "/" && <Sidebar />}
       {isAdmin && location.pathname !== "/" && <AdminSidebar />}
       <div className="left">

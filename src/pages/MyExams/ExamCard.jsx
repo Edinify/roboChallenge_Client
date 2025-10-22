@@ -9,7 +9,6 @@ const ExamCard = ({ exam }) => {
     userData?.lastName ?? ""
   }`.trim();
 
-  // Sadə countdown state
   const [timeLeft, setTimeLeft] = useState({ d: 0, h: 0, m: 0, s: 0 });
   const [isOver, setIsOver] = useState(false);
 
@@ -58,6 +57,11 @@ const ExamCard = ({ exam }) => {
           <div className="row">
             <span className="label">Language:</span>
             <span className="value">{exam?.language ?? "-"}</span>
+          </div>
+
+          <div className="row">
+            <span className="label">Grade:</span>
+            <span className="value">{userData?.grade ?? "-"}</span>
           </div>
           <div className="row">
             <span className="label">Exam Date:</span>
