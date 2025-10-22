@@ -1,5 +1,5 @@
 import "./style.css";
-import { logoutUser } from "../../services/auth/LoginSlice";
+import { logoutUser } from "../../services/auth/loginSlice";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
