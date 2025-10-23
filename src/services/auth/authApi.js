@@ -16,6 +16,7 @@ export const authApi = createApi({
       return headers;
     },
   }),
+  tagTypes: ["user"],
   endpoints: (builder) => ({
     loginUser: builder.mutation({
       query: (user) => ({
@@ -26,9 +27,6 @@ export const authApi = createApi({
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
         try {
           const { data } = await queryFulfilled;
-
-          console.log(data, "dataaa");
-
           localStorage.setItem("auth", data.AccessToken);
           dispatch(setUserToken(data));
         } catch (error) {

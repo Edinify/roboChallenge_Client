@@ -28,7 +28,6 @@ const RulesPage = () => {
       a.remove();
       URL.revokeObjectURL(a.href);
     } catch (e) {
-      // CORS bloklayırsa backup olaraq adi <a> açaq
       window.open(file.url, "_blank", "noopener,noreferrer");
     } finally {
       setDownloadingId(null);

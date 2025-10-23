@@ -1,6 +1,7 @@
 import "swiper/css";
 import "swiper/css/pagination";
 import "./style.css";
+import img1 from "../../../../assets/Qeydiyyat 2.png"
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
@@ -8,14 +9,14 @@ import { Pagination, Autoplay } from "swiper/modules";
 const Home = () => {
   const imageData = [
     {
-      img: "https://picsum.photos/id/1015/800/400",
+      img: img1,
     },
-    {
-      img: "https://picsum.photos/id/1016/800/400",
-    },
-    {
-      img: "https://picsum.photos/id/1018/800/400",
-    },
+    // {
+    //   img: "https://picsum.photos/id/1016/800/400",
+    // },
+    // {
+    //   img: "https://picsum.photos/id/1018/800/400",
+    // },
   ];
   return (
     <div className="enterpage-home">

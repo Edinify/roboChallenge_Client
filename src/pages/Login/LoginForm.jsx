@@ -13,7 +13,9 @@ const LoginForm = () => {
   const navigate = useNavigate();
   const [viewPassword, setViewPassword] = useState(false);
   const [loginUser, { isLoading }] = useLoginUserMutation();
-  const { data: user } = useGetUserQuery();
+  const { data: user, refetch } = useGetUserQuery(undefined, {
+    skip: !localStorage.getItem("auth"),
+  });
 
   const [loginData, setLoginData] = useState({
     email: "",
@@ -26,9 +28,13 @@ const LoginForm = () => {
     try {
       await loginUser(loginData).unwrap();
 
-      if (user?.role === "student") {
+      const userResponse = await refetch();
+
+      const currentUser = userResponse.data;
+
+      if (currentUser?.role === "student") {
         navigate("/myExams");
-      } else if (user?.role === "super-admin") {
+      } else if (currentUser?.role === "super-admin") {
         navigate("/exams");
       }
     } catch (error) {
@@ -44,13 +50,13 @@ const LoginForm = () => {
   return (
     <div className="login-form-page">
       <div className="login-form-container">
-        <div className="form-header">Log in</div>
+        <div className="form-header">Daxil ol</div>
         <form className="login-form" onSubmit={handleSubmit}>
           <div className="input-container">
             <label htmlFor="email">Email</label>
             <input
               type="email"
-              placeholder="Enter your email"
+              placeholder="Email daxil et"
               id="email"
               required
               value={loginData.email}
@@ -60,13 +66,13 @@ const LoginForm = () => {
           </div>
 
           <div className="input-container">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">Şifrə</label>
 
             <div className="password-input">
               <input
                 id="password"
                 type={viewPassword ? "text" : "password"}
-                placeholder="Enter your password"
+                placeholder="Şifrə daxil et"
                 required
                 value={loginData.password}
                 name="password"
@@ -86,7 +92,7 @@ const LoginForm = () => {
           <div className="login-btn-container">
             <div className="login-btn">
               <button type="submit" disabled={isLoading}>
-                {isLoading ? "Loading..." : "Login"}
+                {isLoading ? "Loading..." : "Daxil ol"}
               </button>
               <MdOutlineLogin color="white" size={20} />
             </div>

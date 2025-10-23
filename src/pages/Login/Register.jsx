@@ -37,13 +37,13 @@ const Register = () => {
   return (
     <div className="login-form-page">
       <div className="login-form-container">
-        <div className="form-header">Register</div>
+        <div className="form-header">Qeydiyyat</div>
         <form className="login-form" onSubmit={handleSubmit}>
           <div className="input-container">
-            <label htmlFor="firstName">First name</label>
+            <label htmlFor="firstName">Ad</label>
             <input
               type="text"
-              placeholder="Enter your first name"
+              placeholder="Ad daxil edin"
               id="firstName"
               required
               value={loginData.firstName}
@@ -52,10 +52,10 @@ const Register = () => {
             />
           </div>
           <div className="input-container">
-            <label htmlFor="lastName">Last name</label>
+            <label htmlFor="lastName">Soyad</label>
             <input
               type="text"
-              placeholder="Enter your last name"
+              placeholder="Soyad daxil edin"
               id="lastName"
               required
               value={loginData.lastName}
@@ -64,13 +64,13 @@ const Register = () => {
             />
           </div>
           <div className="input-container">
-            <label htmlFor="lastName">Grade</label>
+            <label htmlFor="lastName">Sinif</label>
             <input
               type="number"
-              placeholder="Enter your grade"
+              placeholder="Sinif daxil edin"
               id="grade"
               required
-              value={loginData.grage}
+              value={loginData.grade}
               name="grade"
               onChange={handleChange}
             />
@@ -79,7 +79,7 @@ const Register = () => {
             <label htmlFor="email">Email</label>
             <input
               type="email"
-              placeholder="Enter your email"
+              placeholder="Email daxil edin"
               id="email"
               required
               value={loginData.email}
@@ -89,13 +89,13 @@ const Register = () => {
           </div>
 
           <div className="input-container">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">Şifrə</label>
 
             <div className="password-input">
               <input
                 id="password"
                 type={viewPassword ? "text" : "password"}
-                placeholder="Enter your password"
+                placeholder="Şifrə daxil edin"
                 required
                 value={loginData.password}
                 name="password"
@@ -113,10 +113,10 @@ const Register = () => {
           </div>
 
           <div className="input-container">
-            <label htmlFor="birthday">Birthday</label>
+            <label htmlFor="birthday">Doğum tarixi</label>
             <input
               type="date"
-              placeholder="Enter your birthday"
+              placeholder="Doğum tarixi daxil edin"
               id="birthday"
               required
               value={loginData.birthday}
@@ -125,10 +125,10 @@ const Register = () => {
             />
           </div>
           <div className="input-container">
-            <label htmlFor="phone">Phone</label>
+            <label htmlFor="phone">Əlaqə nömrəsi</label>
             <input
               type="text"
-              placeholder="Enter your phone"
+              placeholder="Ələqə nömrəsi daxil edin"
               id="phone"
               required
               value={loginData.phone}
@@ -140,7 +140,7 @@ const Register = () => {
           <div className="login-btn-container">
             <div className="login-btn">
               <button type="submit" disabled={isLoading}>
-                {isLoading ? "Loading..." : "Register"}
+                {isLoading ? "Loading..." : "Qeydiyyatdan keç"}
               </button>
               <MdOutlineLogin color="white" size={20} />
             </div>

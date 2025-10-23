@@ -6,16 +6,22 @@ import {
   FaHandshake,
 } from "react-icons/fa";
 
+import firstLogo from "../../../../assets/logos/iria.png";
+import secondLogo from "../../../../assets/logos/gencler.png";
+import thirdLogo from "../../../../assets/logos/agrar.png";
+import FourthLogo from "../../../../assets/logos/azercell.png";
+import FifthLogo from "../../../../assets/logos/4simlogoaz.svg?react";
+
 import "./style.css";
 const Footer = () => {
   return (
     <div className="footer-container">
       <div className="logo-container">
-        <img src="https://picsum.photos/id/1018/800/400" alt="logo" />
-        <img src="https://picsum.photos/id/1018/800/400" alt="logo" />
-        <img src="https://picsum.photos/id/1018/800/400" alt="logo" />
-        <img src="https://picsum.photos/id/1018/800/400" alt="logo" />
-        <img src="https://picsum.photos/id/1018/800/400" alt="logo" />
+        <img src={secondLogo} alt="logo" style={{ width: "120px" }} />
+        <img src={thirdLogo} alt="logo" style={{ width: "150px" }} />
+        <img src={FourthLogo} alt="logo" style={{ width: "150px" }}  />
+        <img src={firstLogo} alt="logo" />
+        <img src={FifthLogo} alt="logo" />
       </div>
       <footer className="footer">
         <div className="footer-top">

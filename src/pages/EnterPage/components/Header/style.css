@@ -17,8 +17,8 @@
   align-items: center;
 }
 
-.enterpage-header .header-container .header-logo-container .header-logo{
-    margin-right: 10px;
+.enterpage-header .header-container .header-logo-container .header-logo {
+  margin-right: 10px;
 }
 
 .enterpage-header .header-container .header-navbar {
@@ -37,4 +37,122 @@
 .enterpage-header .header-container .header-navbar li a {
   text-decoration: none;
   color: black;
+}
+
+.login-btn{
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #2563eb;
+  color: white;
+}
+
+/* Burger default: desktopda gizli */
+.burger {
+  display: none;
+}
+
+/* Mobile drawer default: gizli (off-canvas sağda) */
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: -280px; /* ekrandan kənarda */
+  width: 260px;
+  height: 100vh;
+  background: #fff;
+  border-left: 1px solid #e5e7eb;
+  box-shadow: -10px 0 28px rgba(0, 0, 0, 0.08);
+  padding: 80px 16px 16px;
+  transition: right 0.22s ease-in-out;
+  z-index: 110;
+}
+
+.mobile-drawer.show {
+  right: 0; /* görünür */
+}
+
+.mobile-drawer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.mobile-drawer li {
+  list-style: none;
+  font-size: 16px;
+}
+.mobile-drawer a {
+  color: #111827;
+  text-decoration: none;
+}
+.mobile-drawer a:hover {
+  color: #2563eb;
+}
+
+/* Drawer fonu */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.28);
+  z-index: 105;
+}
+
+
+@media screen and (max-width: 800px) {
+  /* Desktop menyunu gizlət */
+
+  .enterpage-header .header-container .header-navbar {
+    display: none;
+  }
+
+  .enterpage-header .header-container {
+    justify-content: flex-start;
+  }
+
+  /* Burgeri göstər */
+  .burger {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #fff;
+    position: relative;
+  }
+
+  /* 3 cizgi (hamburger) */
+  .burger::before,
+  .burger::after,
+  .burger span {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: #0f172a;
+    border-radius: 2px;
+    transition: 0.2s ease;
+  }
+  .burger span {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .burger::before {
+    top: 12px;
+  }
+  .burger::after {
+    bottom: 12px;
+  }
+
+  /* Açıq vəziyyətdə X olur */
+  .burger.is-open span {
+    opacity: 0;
+  }
+  .burger.is-open::before {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .burger.is-open::after {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }

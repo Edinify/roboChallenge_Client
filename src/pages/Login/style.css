@@ -36,6 +36,7 @@
   border-radius: 4px;
   background-color: #f3f4f6;
   color: #6b7181;
+  cursor: pointer;
 }
 
 .login-page
@@ -138,4 +139,11 @@
   font-size: 16px;
   margin-right: 5px;
   cursor: pointer;
+}
+
+
+@media screen and (max-width:800px) {
+  .login-page .login-container{
+    width: 80%;
+  }
 }

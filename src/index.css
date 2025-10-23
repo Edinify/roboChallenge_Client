@@ -80,8 +80,26 @@
 
 .main-container > .left {
   margin-left: 215px;
+
+}
+
+.main-container > .left {
+  margin-top: 15px;
+  margin-right: 15px;
 }
 
 .main-container.user-panel-container > .left {
   margin: 0;
+
+}
+
+
+
+@media screen and (max-width:800px) {
+  .main-container > .left {
+  margin-left: 40px;
+
+}
+
+
 }

@@ -7,6 +7,8 @@ import { examApi } from "../services/exams/examsApi";
 import examModalSlice from "../services/exams/examModalSlice";
 import { studyMaterialApi } from "../services/studyMaterials/studyMaterialsApi";
 import studyMaterialModalSlice from "../services/studyMaterials/studyModal";
+import { newsApi } from "../services/news/newsApi";
+import newsModalSlice from "../services/news/newsModalSlice";
 
 export const store = configureStore({
   reducer: {
@@ -17,12 +19,15 @@ export const store = configureStore({
     examModal: examModalSlice,
     [studyMaterialApi.reducerPath]: studyMaterialApi.reducer,
     studyModal: studyMaterialModalSlice,
+    [newsApi.reducerPath]: newsApi.reducer,
+    newsModal: newsModalSlice,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(
       authApi.middleware,
       examApi.middleware,
-      studyMaterialApi.middleware
+      studyMaterialApi.middleware,
+      newsApi.middleware
     ),
 });
 

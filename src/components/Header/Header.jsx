@@ -18,16 +18,18 @@ const Header = () => {
     <header className="user-header">
       <div className="header-container">
         <div className="user-context">
-          <p>{`${user?._id} - ${user?.firstName} ${user?.lastName} `}</p>
+          <p>{`AZ${user?.studentId ? user?.studentId : "1234"} - ${
+            user?.firstName
+          } ${user?.lastName} `}</p>
         </div>
         <div className="header-btns">
           <button onClick={() => navigate("/")}>
             {" "}
-            <FaHome /> Home Page
+            <FaHome /> Ana səhifəyə qayıt
           </button>
           <button onClick={handleLogout}>
             {" "}
-            <FiLogOut /> Log out
+            <FiLogOut /> Çıxış
           </button>
         </div>
       </div>

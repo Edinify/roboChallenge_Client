@@ -1,37 +1,32 @@
-import React from "react";
-import ExamCard from "./ExamCard";
-import {
-  useDeleteExamMutation,
-  useGetAllExamsQuery,
-} from "../../services/exams/examsApi";
 import { useDispatch } from "react-redux";
-import { openExamModal, setExam } from "../../services/exams/examModalSlice";
+import {
+  useGetAllNewsQuery,
+  useDeleteNewsMutation,
+} from "../../services/news/newsApi";
+import { openNewsModal, setNews } from "../../services/news/newsModalSlice";
+import NewsCard from "./NewsCard";
 
-const ExamData = () => {
-  const { data: exams, isLoading, isError } = useGetAllExamsQuery();
+const NewsData = () => {
+  const { data: news, isLoading, isError } = useGetAllNewsQuery();
+
   const dispatch = useDispatch();
-  const [deleteExam] = useDeleteExamMutation();
+  const [deleteNews] = useDeleteNewsMutation();
 
   const tableHead = [
     { id: 1, label: "Title" },
-    { id: 2, label: "Subject" },
+
     { id: 3, label: "Description" },
-    { id: 4, label: "Language" },
-    { id: 5, label: "Date" },
-    { id: 6, label: "During (h)" },
-    { id: 7, label: "Price" },
-    { id: 8, label: "Status" },
+
     { id: 9, label: "" },
   ];
 
   const handleEdit = (exam) => {
-    dispatch(openExamModal(true));
-    dispatch(setExam(exam));
+    dispatch(openNewsModal(true));
+    dispatch(setNews(exam));
   };
 
   const handleDelete = async (id) => {
-    await deleteExam(id).unwrap();
-    console.log("DELETE ->", id);
+    await deleteNews(id).unwrap();
   };
 
   if (isLoading) {
@@ -60,11 +55,11 @@ const ExamData = () => {
         </thead>
 
         <tbody>
-          {exams?.length ? (
-            exams.map((exam, i) => (
-              <ExamCard
-                key={exam._id}
-                exam={exam}
+          {news?.length ? (
+            news.map((data, i) => (
+              <NewsCard
+                key={data._id}
+                data={data}
                 cellNumber={i + 1}
                 onEdit={handleEdit}
                 onDelete={handleDelete}
@@ -83,4 +78,4 @@ const ExamData = () => {
   );
 };
 
-export default ExamData;
+export default NewsData;

@@ -19,3 +19,10 @@
   object-fit: cover;
   border-radius: 5px;
 }
+
+
+@media screen and (max-width:800px) {
+  .gallery .gallery-container{
+    grid-template-columns: repeat(1,1fr);
+  }
+}

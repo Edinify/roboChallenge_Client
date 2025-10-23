@@ -116,3 +116,10 @@
   cursor: not-allowed;
   box-shadow: none;
 }
+
+
+@media screen and (max-width:800px) {
+  .study-material-cards{
+    grid-template-columns: repeat(1,1fr);
+  }
+}

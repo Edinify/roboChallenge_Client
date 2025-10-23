@@ -20,7 +20,7 @@ const Login = () => {
               onClick={() => navigate("/login")}
             >
               <MdOutlineLogin size={20} />
-              <button>Log in</button>
+              <button>Daxil ol</button>
             </div>
             <div
               className={`login-switch-container ${
@@ -28,7 +28,7 @@ const Login = () => {
               } `}
               onClick={() => navigate("register")}
             >
-              <button>Register</button>
+              <button>Qeydiyyat</button>
               <BsPersonPlusFill size={20} />
             </div>
           </div>

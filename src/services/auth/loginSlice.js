@@ -5,6 +5,7 @@ const initialState = {
     password: "",
     email: "",
     userToken: "",
+    role:""
   },
 };
 

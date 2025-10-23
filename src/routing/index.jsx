@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Login from "../pages/Login/Login";
 import EnterPage from "../pages/EnterPage/EnterPage";
 import Register from "../pages/Login/Register";
@@ -9,18 +9,29 @@ import Sidebar from "../components/Sidebar/Sidebar";
 import Header from "../components/Header/Header";
 import { AdminRoute } from "./AdminRoute";
 import AdminSidebar from "../components/Sidebar/AdminSidebar";
+import { useEffect } from "react";
 
 const Routing = () => {
   const location = useLocation();
   const token = localStorage.getItem("auth");
+  const navigate = useNavigate();
 
   const { data: user, isFetching } = useGetUserQuery(undefined, {
     skip: !token,
   });
 
+  console.log(user, "userrrrrrrrrrrrrrrrr");
   const isStudent = user?.role === "student";
 
   const isAdmin = user?.role === "super-admin";
+
+  useEffect(() => {
+    if (token && isStudent && location.pathname === "/login") {
+      navigate("/announcements");
+    } else if (token && isAdmin && location.pathname === "/login") {
+      navigate("/exams");
+    }
+  }, [token, isAdmin, isStudent, location, navigate]);
 
   if (token && isFetching && !user) {
     return (
