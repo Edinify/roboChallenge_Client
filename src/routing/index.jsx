@@ -10,6 +10,9 @@ import Header from "../components/Header/Header";
 import { AdminRoute } from "./AdminRoute";
 import AdminSidebar from "../components/Sidebar/AdminSidebar";
 import { useEffect } from "react";
+import AboutPrivacy from "../pages/AboutPrivacy/AboutPrivacy";
+import ContactPage from "../pages/ContactPage/ContactPage";
+import GalleryAll from "../pages/EnterPage/components/Gallery/GalleryAll";
 
 const Routing = () => {
   const location = useLocation();
@@ -53,6 +56,9 @@ const Routing = () => {
         {isStudent && location.pathname !== "/" && <Header />}
         <Routes>
           <Route path="/" element={<EnterPage />} />
+          <Route path="/gallery-all" element={<GalleryAll/>} />
+          <Route path="/about-privacy" element={<AboutPrivacy />} />
+          <Route path="/contact" element={<ContactPage />} />
 
           {!token && (
             <Route path="/login" element={<Login />}>
