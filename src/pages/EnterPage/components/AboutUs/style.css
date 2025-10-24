@@ -30,6 +30,7 @@
 
 .about-us .about-us-img-container{
     margin: 20px 0;
+     width: 80%
 }
 
 
@@ -37,6 +38,7 @@
   .about-us .about-us-container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
+   
   }
 .about-us .about-us-img-container img{
   width: 100%;

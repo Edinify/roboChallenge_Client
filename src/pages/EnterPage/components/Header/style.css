@@ -21,13 +21,22 @@
   margin-right: 10px;
 }
 
+.enterpage-header .logo-context h6 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.enterpage-header .logo-context span {
+  color: #d22927;
+}
+
 .enterpage-header .header-container .header-navbar {
   display: flex;
   align-items: center;
 }
 
 .enterpage-header .header-container .header-navbar li {
-  margin-right: 5px;
+  margin-right: 10px;
   list-style: none;
   font-size: 16px;
   color: black;
@@ -39,7 +48,7 @@
   color: black;
 }
 
-.login-btn{
+.login-btn {
   cursor: pointer;
   padding: 8px;
   border-radius: 4px;
@@ -95,7 +104,6 @@
   background: rgba(0, 0, 0, 0.28);
   z-index: 105;
 }
-
 
 @media screen and (max-width: 800px) {
   /* Desktop menyunu gizlət */

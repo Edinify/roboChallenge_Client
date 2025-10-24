@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./style.css";
 import { useGetUserQuery } from "../../../../services/auth/authApi";
 import { useState } from "react";
@@ -12,7 +12,6 @@ const Header = () => {
 
   const [open, setOpen] = useState(false);
 
-  console.log(token, "token");
 
   const handleNavigate = () => {
     if (token && user.role === "student") {
@@ -40,7 +39,9 @@ const Header = () => {
             </div>
             <div className="logo-context">
               <h6>
-                INTERNATIONAL <br /> STEAM OLIMPIAD
+                <span>R</span>OBOT <span>C</span>HALLENGE <br /> 
+                2026 / AZERBAIJAN
+
               </h6>
             </div>
           </div>
@@ -63,8 +64,11 @@ const Header = () => {
             <a href="#announcement">Elanlar</a>
           </li>
           <li>
-            <a href="#contact">Əlaqə</a>
+            <NavLink to="/about-privacy" >Haqqında və məxfilik</NavLink>
           </li>
+          <li>
+                <NavLink to="/contact" >Əlaqə</NavLink>
+            </li>
           <button className="login-btn" onClick={() => handleNavigate()}>Daxil ol</button>
         </ul>
 
@@ -86,8 +90,11 @@ const Header = () => {
               <a href="#announcement">Elanlar</a>
             </li>
             <li>
-              <a href="#contact">Əlaqə</a>
+                <NavLink to="/contact" >Əlaqə</NavLink>
             </li>
+             <li>
+            <NavLink to="/about-privacy" >Haqqında və məxfilik</NavLink>
+          </li>
             <button onCbuttonck={handleNavigate} className="login-btn">
               Daxil ol
             </button>
