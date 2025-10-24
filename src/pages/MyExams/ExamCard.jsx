@@ -12,6 +12,8 @@ const ExamCard = ({ exam }) => {
   const [timeLeft, setTimeLeft] = useState({ d: 0, h: 0, m: 0, s: 0 });
   const [isOver, setIsOver] = useState(false);
 
+
+
   useEffect(() => {
     if (!exam?.date) return;
 

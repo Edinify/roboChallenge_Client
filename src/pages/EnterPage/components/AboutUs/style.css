@@ -19,13 +19,17 @@
   justify-content: center;
 }
 
+.about-us .about-us-container .about-context img{
+  width: 60px;
+}
+
 .about-us .about-us-container .about-context h6 {
   font-size: 16px;
   text-transform: uppercase;
 }
 
 .about-us .about-us-container .about-context span {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .about-us .about-us-img-container{

@@ -5,18 +5,18 @@ const AdminSidebar = () => {
     <div className={`main-sidebar  `}>
       <ul className="sidebar-nav-list user ">
         <li>
-          <NavLink to="/exams">Exams</NavLink>
+          <NavLink to="/exams">İmtahanlar</NavLink>
         </li>
 
         <li>
-          <NavLink to="/study-materials">Study Materials</NavLink>
+          <NavLink to="/study-materials">Dərs materialları</NavLink>
         </li>
         <li>
           <NavLink to="/announcements">Elanlar</NavLink>
         </li>
-        <li>
-          <NavLink to="/profile">My Profile</NavLink>
-        </li>
+        {/* <li>
+          <NavLink to="/profile">Hesabım</NavLink>
+        </li> */}
       </ul>
     </div>
   );

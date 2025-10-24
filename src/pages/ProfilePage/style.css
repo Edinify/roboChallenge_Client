@@ -1,0 +1,101 @@
+.profile {
+}
+
+.profile .info-container {
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 6px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.profile .info-container .personal-info-container {
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 6px;
+  background-color: white;
+  width: 60%;
+}
+
+.profile .info-container .update-password-container {
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 6px;
+  background-color: white;
+}
+
+.profile .all-inputs-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.profile .input-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  margin-left: 0;
+}
+
+.profile .input-container input {
+  border: 1px solid #d1d5dc;
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.profile .save-btn {
+  padding: 6px;
+  border-radius: 4px;
+  width: 200px;
+  background-color: #d1d5dc;
+  cursor: pointer;
+}
+
+.profile .update-password-container {
+  width: 30%;
+}
+
+.profile .update-password-container .input-container {
+  width: 100%;
+}
+
+.profile .update-password-container .input-container input {
+  width: 100%;
+}
+
+.profile .update-password-container .input-container .password-input {
+  position: relative;
+}
+
+.profile .update-password-container .input-container .toggle-password {
+  top: 15px;
+}
+
+.profile .update-btn button {
+  background-color: #e6762a;
+  padding: 6px;
+  border-radius: 4px;
+  width: 200px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  .profile .info-container {
+    flex-direction: column;
+  }
+
+  .profile .info-container .personal-info-container {
+    width: 100%;
+  }
+
+  .profile .all-inputs-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .profile .info-container .update-password-container {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
