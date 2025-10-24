@@ -19,14 +19,24 @@ const Routing = () => {
   const token = localStorage.getItem("auth");
   const navigate = useNavigate();
 
-  const { data: user, isFetching } = useGetUserQuery(undefined, {
+  const {
+    data: user,
+    isFetching,
+    error
+  } = useGetUserQuery(undefined, {
     skip: !token,
   });
 
-  console.log(user, "userrrrrrrrrrrrrrrrr");
   const isStudent = user?.role === "student";
 
   const isAdmin = user?.role === "super-admin";
+
+  useEffect(() => {
+    if (error && token) {
+      localStorage.removeItem("auth");
+      navigate("/login");
+    }
+  }, [error, token, navigate]);
 
   useEffect(() => {
     if (token && isStudent && location.pathname === "/login") {
@@ -46,17 +56,31 @@ const Routing = () => {
 
   return (
     <div
-      className={`main-container ${
-        !token || location.pathname === "/" ? "user-panel-container" : ""
+      className={`main-container   ${
+        !token ||
+        location.pathname === "/" ||
+        location.pathname === "/contact" ||
+        location.pathname === "/about-privacy"
+          ? "user-panel-container"
+          : ""
       }  `}
     >
-      {isStudent && location.pathname !== "/" && <Sidebar />}
-      {isAdmin && location.pathname !== "/" && <AdminSidebar />}
+      {isStudent &&
+        location.pathname !== "/" &&
+        location.pathname !== "/about-privacy" &&
+        location.pathname !== "/contact" && <Sidebar />}
+      {isAdmin &&
+        location.pathname !== "/" &&
+        location.pathname !== "/contact" &&
+        location.pathname !== "/about-privacy" && <AdminSidebar />}
       <div className="left">
-        {isStudent && location.pathname !== "/" && <Header />}
+        {isStudent &&
+          location.pathname !== "/" &&
+          location.pathname !== "/contact" &&
+          location.pathname !== "/about-privacy" && <Header />}
         <Routes>
           <Route path="/" element={<EnterPage />} />
-          <Route path="/gallery-all" element={<GalleryAll/>} />
+          <Route path="/gallery-all" element={<GalleryAll />} />
           <Route path="/about-privacy" element={<AboutPrivacy />} />
           <Route path="/contact" element={<ContactPage />} />
 

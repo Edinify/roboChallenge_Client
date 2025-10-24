@@ -5,7 +5,6 @@
   src: local("Nunito Light"), url("./font/Nunito-Light.ttf") format("ttf");
 }
 
-
 :root {
   --dark-blue: #002855;
 
@@ -80,7 +79,6 @@
 
 .main-container > .left {
   margin-left: 215px;
-
 }
 
 .main-container > .left {
@@ -90,16 +88,10 @@
 
 .main-container.user-panel-container > .left {
   margin: 0;
-
 }
 
-
-
-@media screen and (max-width:800px) {
+@media screen and (max-width: 800px) {
   .main-container > .left {
-  margin-left: 40px;
-
-}
-
-
+    margin-left: 40px;
+  }
 }

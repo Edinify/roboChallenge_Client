@@ -1,17 +1,25 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import "./style.css";
 import { useGetUserQuery } from "../../../../services/auth/authApi";
-import { useState } from "react";
-import Logo from "../../../../assets/logos/logo-2.png"
+import { useEffect, useState } from "react";
+import Logo from "../../../../assets/logos/logo-2.png";
 const Header = () => {
   const navigate = useNavigate();
 
   const token = localStorage.getItem("auth");
 
-  const { data: user } = useGetUserQuery();
+  const { data: user,error } = useGetUserQuery(undefined, {
+    skip:!token,
+  });
+
+  useEffect(() => {
+  if (error && token) {
+    localStorage.removeItem("auth");
+    // Navigate etməyə ehtiyac yoxdur, Routing komponenti edəcək
+  }
+}, [error, token]);
 
   const [open, setOpen] = useState(false);
-
 
   const handleNavigate = () => {
     if (token && user.role === "student") {
@@ -39,9 +47,8 @@ const Header = () => {
             </div>
             <div className="logo-context">
               <h6>
-                <span>R</span>OBOT <span>C</span>HALLENGE <br /> 
+                <span>R</span>OBOT <span>C</span>HALLENGE <br />
                 2026 / AZERBAIJAN
-
               </h6>
             </div>
           </div>
@@ -64,12 +71,14 @@ const Header = () => {
             <a href="#announcement">Elanlar</a>
           </li>
           <li>
-            <NavLink to="/about-privacy" >Haqqında və məxfilik</NavLink>
+            <NavLink to="/about-privacy">Haqqında və məxfilik</NavLink>
           </li>
           <li>
-                <NavLink to="/contact" >Əlaqə</NavLink>
-            </li>
-          <button className="login-btn" onClick={() => handleNavigate()}>Daxil ol</button>
+            <NavLink to="/contact">Əlaqə</NavLink>
+          </li>
+          <button className="login-btn" onClick={() => handleNavigate()}>
+            Daxil ol
+          </button>
         </ul>
 
         <div className={`mobile-drawer ${open ? "show" : ""}`}>
@@ -90,12 +99,12 @@ const Header = () => {
               <a href="#announcement">Elanlar</a>
             </li>
             <li>
-                <NavLink to="/contact" >Əlaqə</NavLink>
+              <NavLink to="/contact">Əlaqə</NavLink>
             </li>
-             <li>
-            <NavLink to="/about-privacy" >Haqqında və məxfilik</NavLink>
-          </li>
-            <button onCbuttonck={handleNavigate} className="login-btn">
+            <li>
+              <NavLink to="/about-privacy">Haqqında və məxfilik</NavLink>
+            </li>
+            <button onClick={handleNavigate} className="login-btn">
               Daxil ol
             </button>
           </ul>

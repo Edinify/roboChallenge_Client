@@ -26,7 +26,7 @@ const AboutUs = () => {
       img: TbWorld,
       title: "Müəllimlər",
       count: "660+",
-      color: "yellow",
+      color: "gray",
     },
     {
       id: 4,
