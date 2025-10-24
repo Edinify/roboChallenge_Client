@@ -2,11 +2,18 @@ import { useGetAllNewsQuery } from "../../services/news/newsApi";
 import AnnouncementCard from "./AnnouncementCard";
 import "./style.css";
 import { MdOutlineAnnouncement } from "react-icons/md";
+import { IoMdContact } from "react-icons/io";
+import { useDispatch } from "react-redux";
+import { openContactModal } from "../../services/student/contactModal";
+
 
 const AnnouncementsPage = () => {
   const { data: news } = useGetAllNewsQuery();
+  const dispatch = useDispatch();
+  const openModal = ()=>{
+    dispatch(openContactModal(true))
+  }
 
-  console.log(news, "news");
   return (
     <div className="news-page">
       <div className="news-page-container">
@@ -27,6 +34,10 @@ const AnnouncementsPage = () => {
           </div>
         </div>
       </div>
+      <div className="contact-container" onClick={openModal} >
+        <IoMdContact size={40}/>
+      </div>
+     
     </div>
   );
 };

@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import firstRules from "../../assets/rules/RC-RCCODEC++.pdf";
 import secondRules from "../../assets/rules/RC-RCCODEPYTHON.pdf";
 import thirdRules from "../../assets/rules/RC-RCCODESCRATCH.pdf";
-import "./style.css"
+import "./style.css";
+import { useDispatch } from "react-redux";
+import { openContactModal } from "../../services/student/contactModal";
+import { IoMdContact } from "react-icons/io";
 const files = [
   { id: 1, title: "CODEC", url: firstRules },
   { id: 2, title: "PHYTON", url: secondRules },
@@ -11,6 +14,11 @@ const files = [
 
 const RulesPage = () => {
   const [downloadingId, setDownloadingId] = useState(null);
+
+  const dispatch = useDispatch();
+  const openModal = () => {
+    dispatch(openContactModal(true));
+  };
 
   const forceDownload = async (file) => {
     try {
@@ -68,7 +76,9 @@ const RulesPage = () => {
           </div>
         ))}
       </div>
-
+      <div className="contact-container" onClick={openModal}>
+        <IoMdContact size={40} />
+      </div>
     </div>
   );
 };

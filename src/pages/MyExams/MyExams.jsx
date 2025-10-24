@@ -1,8 +1,16 @@
 import "./style.css";
 import { useGetAllExamsQuery } from "../../services/exams/examsApi";
 import ExamCard from "./ExamCard";
+import { IoMdContact } from "react-icons/io";
+import { useDispatch } from "react-redux";
+import { openContactModal } from "../../services/student/contactModal";
 const MyExams = () => {
   const { data: exams } = useGetAllExamsQuery();
+
+  const dispatch = useDispatch();
+  const openModal = () => {
+    dispatch(openContactModal(true));
+  };
 
   return (
     <div className="my-exams">
@@ -30,6 +38,9 @@ const MyExams = () => {
             <ExamCard key={exam._id} exam={exam} />
           ))}
         </div>
+      </div>
+      <div className="contact-container" onClick={openModal}>
+        <IoMdContact size={40} />
       </div>
     </div>
   );

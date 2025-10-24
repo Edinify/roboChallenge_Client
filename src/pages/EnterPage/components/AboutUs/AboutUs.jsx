@@ -2,6 +2,13 @@ import "./style.css";
 import { TbWorld } from "react-icons/tb";
 import { LuSchool } from "react-icons/lu";
 import roadMap from "../../../../assets/imgs/roadmap.svg?react";
+import countryImg from "../../../../assets/imgs/countries.png"
+import teacherImg from "../../../../assets/imgs/teachers.png"
+import studentImg from "../../../../assets/imgs/students.png"
+import schoolImg from "../../../../assets/imgs/schools.png"
+
+
+
 
 import { PiStudentBold } from "react-icons/pi";
 
@@ -9,31 +16,31 @@ const AboutUs = () => {
   const aboutData = [
     {
       id: 1,
-      img: TbWorld,
+      img: countryImg,
       title: "Ölkələr",
       count: 42,
       color: "red",
     },
     {
       id: 2,
-      img: LuSchool,
+      img: schoolImg,
       title: "Məktəblər",
       count: "300+",
       color: "blue",
     },
     {
       id: 3,
-      img: TbWorld,
+      img: teacherImg,
       title: "Müəllimlər",
       count: "660+",
-      color: "gray",
+      color: "red",
     },
     {
       id: 4,
-      img: PiStudentBold,
+      img: studentImg,
       title: "Tələblər",
       count: "2300+",
-      color: "green",
+      color: "blue",
     },
   ];
   return (
@@ -41,7 +48,7 @@ const AboutUs = () => {
       <div className="about-us-container">
         {aboutData?.map((data) => (
           <div className="about-context" key={data.id}>
-            <data.img size={50} />
+            <img src={data.img} alt="" />
             <h6 style={{ color: data.color }}>{data.title}</h6>
             <span>daha çox</span>
             <h6>{data.count}</h6>

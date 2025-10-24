@@ -1,6 +1,6 @@
-.challenge-time-container{
-    display: flex;
-    flex-direction: column;
+.challenge-time-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .challenge-time {
@@ -8,6 +8,7 @@
   color: white;
   text-align: center;
   padding: 50px 20px;
+  margin-top: 20px;
 }
 
 .challenge-title {
@@ -24,18 +25,18 @@
 }
 
 .event-card {
-  background-color: white;
+  /* background-color: white; */
   color: #333;
   width: 260px;
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: 0.3s ease;
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); */
+  /* transition: 0.3s ease; */
 }
 
-.event-card:hover {
+/* .event-card:hover {
   transform: translateY(-5px);
-}
+} */
 
 .event-icon {
   width: 55px;
@@ -79,10 +80,9 @@
   margin-bottom: 5px;
 }
 
-
-.exam-time{
-    background-color: gray;
-     color: white;
+.exam-time {
+  background-color: lightgray;
+  color: white;
   text-align: center;
   padding: 50px 20px;
 }

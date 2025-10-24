@@ -2,7 +2,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "./style.css";
 import { useGetUserQuery } from "../../../../services/auth/authApi";
 import { useEffect, useState } from "react";
-import Logo from "../../../../assets/logos/logo-2.png";
+import Logo from "../../../../assets/logos/logo.svg?react";
 const Header = () => {
   const navigate = useNavigate();
 
@@ -45,12 +45,12 @@ const Header = () => {
             <div className="header-logo">
               <img src={Logo} alt="/logo" />
             </div>
-            <div className="logo-context">
+            {/* <div className="logo-context">
               <h6>
                 <span>R</span>OBOT <span>C</span>HALLENGE <br />
                 2026 / AZERBAIJAN
               </h6>
-            </div>
+            </div> */}
           </div>
         </div>
 

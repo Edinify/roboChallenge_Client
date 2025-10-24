@@ -95,3 +95,14 @@
     margin-left: 40px;
   }
 }
+
+
+.contact-container{
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+
+.contact-container svg{
+  cursor: pointer;
+}

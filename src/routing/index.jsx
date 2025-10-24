@@ -13,6 +13,9 @@ import { useEffect } from "react";
 import AboutPrivacy from "../pages/AboutPrivacy/AboutPrivacy";
 import ContactPage from "../pages/ContactPage/ContactPage";
 import GalleryAll from "../pages/EnterPage/components/Gallery/GalleryAll";
+import PaymentError from "../pages/PaymentPages/PaymentError";
+import PaymentSuccess from "../pages/PaymentPages/PaymentSuccess";
+import PaymentResult from "../pages/PaymentPages/PaymentResult";
 
 const Routing = () => {
   const location = useLocation();
@@ -80,6 +83,9 @@ const Routing = () => {
           location.pathname !== "/about-privacy" && <Header />}
         <Routes>
           <Route path="/" element={<EnterPage />} />
+            <Route path="/payment-result" element={<PaymentResult />} />
+        <Route path="/payment-success" element={<PaymentSuccess />} />
+        <Route path="/payment-error" element={<PaymentError />} />
           <Route path="/gallery-all" element={<GalleryAll />} />
           <Route path="/about-privacy" element={<AboutPrivacy />} />
           <Route path="/contact" element={<ContactPage />} />

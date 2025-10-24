@@ -19,6 +19,12 @@
 
 .enterpage-header .header-container .header-logo-container .header-logo {
   margin-right: 10px;
+  height: 120px;
+}
+
+.enterpage-header .header-container .header-logo-container .header-logo  img{
+  width: 150px;
+  /* height: 120px; */
 }
 
 .enterpage-header .logo-context h6 {

@@ -16,31 +16,31 @@ const Sidebar = () => {
       </button>
       <ul className={`sidebar-nav-list user ${open ? "open" : ""} `}>
         <li onClick={() => setOpen(false)}>
-          <NavLink to="/announcements">Announcements</NavLink>
+          <NavLink to="/announcements">Elanlar</NavLink>
         </li>
         <li onClick={() => setOpen(false)}>
-          <NavLink to="/myExams">My Exams</NavLink>
+          <NavLink to="/myExams">İmtahanlarım</NavLink>
         </li>
         <li onClick={() => setOpen(false)}>
-          <NavLink to="/study-materials">Study Materials</NavLink>
+          <NavLink to="/study-materials">Dərs materialları</NavLink>
         </li>
         <li onClick={() => setOpen(false)}>
-          <NavLink to="/payments">Payments</NavLink>
+          <NavLink to="/payments">Ödənişlər</NavLink>
         </li>
         <li onClick={() => setOpen(false)}>
-          <NavLink to="/examResults">Exam Results</NavLink>
+          <NavLink to="/examResults">İmtahan nəticələri</NavLink>
         </li>
         <li onClick={() => setOpen(false)}>
-          <NavLink to="/certificates">Certificates</NavLink>
+          <NavLink to="/certificates">Sertifikatlar</NavLink>
         </li>
         <li onClick={() => setOpen(false)}>
-          <NavLink to="/olympiad">Olympiad Calendat</NavLink>
+          <NavLink to="/olympiad">Olimpiad Kalendar</NavLink>
         </li>
         <li onClick={() => setOpen(false)}>
-          <NavLink to="/profile">My Profile</NavLink>
+          <NavLink to="/profile">Profilim</NavLink>
         </li>
         <li onClick={() => setOpen(false)}>
-          <NavLink to="/rules">Rules</NavLink>
+          <NavLink to="/rules">Qaydalar</NavLink>
         </li>
       </ul>
     </div>
